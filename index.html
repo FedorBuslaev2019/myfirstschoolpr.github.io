@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+ <?php
+  $mysqli = @new mysqli('localhost', 'Admin', 'pass', 'mybase');
+  if (mysqli_connect_errno()) {
+    echo "Подключение невозможно: ".mysqli_connect_error();
+  }
+  $mysqli->close();
+?>
 <html>
 <head>
        <title> Мой блог</title>
@@ -22,14 +29,7 @@
         <input type="password" name="r_pass" id="r_pass" placeholder="Повторите пароль"><br>
         <input type="submit" name="registr" id="registr" value="Регистрация"><br>
         <input type="reset" value="Сброс"><br>
-               <?php
-  $mysqli = @new mysqli('localhost', 'Admin', 'pass', 'mybase');
-  if (mysqli_connect_errno()) {
-    echo "Подключение невозможно: ".mysqli_connect_error();
-  }
-  $mysqli->close();
-?>
-        </form>
+                  </form>
     </content>
     <div>
         <hr/>

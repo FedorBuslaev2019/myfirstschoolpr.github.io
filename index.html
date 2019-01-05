@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<?
+$link = mysql_connect("localhost","root","");
+mysql_query('CREATE DATABASE base',$link); //сделать только 1 раз, потом убрать эту
+mysql_select_db("base",$link);
+mysql_query('create table news (id int not null auto_increment, primary key(id), mes text)',$link); //и эту строку. обязательно!
+$m=mysql_escape_string($_POST['m']);
+if ($m!='') {
+mysql_query('instert into news (mes) values ("'.$m.'")',$link);
+}
+$mes = mysql_query("SELECT mes FROM news", $link);
+while ($ui = mysql_fetch_assoc($mes)) {
+echo $ui['mes'].'<br>';
+}
+?>
+
 <html>
 <head>
        <title> Мой блог</title>
@@ -22,6 +37,8 @@
         <input type="password" name="r_pass" id="r_pass" placeholder="Повторите пароль"><br>
         <input type="submit" name="registr" id="registr" value="Регистрация"><br>
         <input type="reset" value="Сброс"><br>
+               <form method='post'>
+<textarea name='m'></textarea><br><input type='submit' value='Отправить'></form>
         </form>
     </content>
     <div>

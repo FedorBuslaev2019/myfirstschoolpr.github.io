@@ -1,0 +1,66 @@
+html {
+    background-image: url(https://buyoncdn.ru/preset/3477835112/pages_original/a6/37/b5/a637b5d9b0cb6f2b9f3675c38b3d32a5728956b1.jpg);
+}
+body {
+    margin: 10%;
+}
+.form-row {
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+.form-row input {
+	float: right;
+	height: 19px;
+	line-height: 19px;
+	margin: 0px;
+	padding: 0px 5px;
+	width: 287px;
+	border: 1px solid #ABADB3;
+}
+
+.reg-form {
+	width: 416px;
+	margin: 0 auto;
+}
+
+.form-row textarea {
+	height: 90px;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 0px 5px;
+    width: 404px;
+    border: 1px solid #ABADB3;
+}
+
+.form-row input[type=submit] {
+	padding:5px;
+	height:25px;
+	width:100%;
+	line-height: 10px;
+	background: #337AB7;
+	color:white;
+}
+
+.form-row input[type=submit]:hover {
+	background:#286090;
+}
+.hretyp a {
+    padding: 5px 5px 5px 5px;
+    width: 404px;
+    border: 1px solid #ABADB3;
+	height:25px;
+	width:100px;
+	line-height: 10px;
+    text-align: center;
+	background: #337AB7;
+	color:white;
+}
+.hretyp a {
+    background:#286090;
+    text-decoration: none;
+}
+
+* {
+	font-family:arial;
+	font-size:10pt;
+}
